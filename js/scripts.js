@@ -1,12 +1,6 @@
-// Create a request variable and assign a new XMLHttpRequest object to it
-const request = new XMLHttpRequest();
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://randomuser.me/api/', true);
+//Fetch function
 
-request.onload = function () {
-  // Begin accessing JSON data
-}
-
-// Send request
-request.send();
+fetch('https://randomuser.me/api/')
+    .then(response => response.json())
+    .then(data => console.log(data.results))
