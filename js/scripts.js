@@ -4,7 +4,7 @@ const cards = document.getElementsByClassName('card');
 
 //Fetch function gets data from API
 
-fetch('https://randomuser.me/api/?results=12')
+fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(response => response.json())
     .then(data => generateProfile(data.results))
 
